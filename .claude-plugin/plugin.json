@@ -1,0 +1,41 @@
+{
+  "name": "php-lsp",
+  "version": "0.1.0",
+  "description": "Full-featured PHP language server — diagnostics, code actions, refactoring, PSR-4/Composer, PHPUnit test runner",
+  "author": {
+    "name": "Jorg Sowa"
+  },
+  "repository": "https://github.com/jorgsowa/claude-php-lsp-plugin",
+  "license": "MIT",
+  "lspServers": {
+    "php": {
+      "command": "php-lsp",
+      "args": [],
+      "transport": "stdio",
+      "extensionToLanguage": {
+        ".php": "php",
+        ".phtml": "php",
+        ".php3": "php",
+        ".php4": "php",
+        ".php5": "php",
+        ".phps": "php"
+      },
+      "initializationOptions": {
+        "phpVersion": "8.1",
+        "excludePaths": [],
+        "diagnostics": {
+          "enabled": true,
+          "undefinedVariables": true,
+          "undefinedFunctions": true,
+          "undefinedClasses": true,
+          "arityErrors": true,
+          "typeErrors": true,
+          "deprecatedCalls": true,
+          "duplicateDeclarations": true
+        }
+      },
+      "settings": {},
+      "maxRestarts": 3
+    }
+  }
+}

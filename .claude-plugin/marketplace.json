@@ -1,0 +1,52 @@
+{
+  "name": "claude-php-lsp-plugin",
+  "owner": {
+    "name": "Jorg Sowa",
+    "email": "jorg.sowa@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "php-lsp",
+      "version": "0.1.0",
+      "source": "./php-lsp",
+      "description": "Full-featured PHP language server — diagnostics, code actions, refactoring, PSR-4/Composer, PHPUnit test runner",
+      "category": "development",
+      "tags": ["php", "lsp", "language-server", "diagnostics", "refactoring"],
+      "author": {
+        "name": "Jorg Sowa",
+        "email": "jorg.sowa@gmail.com"
+      },
+      "lspServers": {
+        "php": {
+          "command": "php-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".php": "php",
+            ".phtml": "php",
+            ".php3": "php",
+            ".php4": "php",
+            ".php5": "php",
+            ".phps": "php"
+          },
+          "initializationOptions": {
+            "phpVersion": "8.1",
+            "excludePaths": [],
+            "diagnostics": {
+              "enabled": true,
+              "undefinedVariables": true,
+              "undefinedFunctions": true,
+              "undefinedClasses": true,
+              "arityErrors": true,
+              "typeErrors": true,
+              "deprecatedCalls": true,
+              "duplicateDeclarations": true
+            }
+          },
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    }
+  ]
+}
